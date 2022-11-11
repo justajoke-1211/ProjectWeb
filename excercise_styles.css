@@ -1,25 +1,59 @@
 .header { grid-area: header; }
-.navogation { grid-area: menu; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
-.item5 { grid-area: footer; }
-
+.menu { grid-area: menu; }
+.content { grid-area: main; }
+.footer { grid-area: footer;}
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu main main main main main'
+    'header header header menu menu menu '
+    'main main main main main main'
     'footer footer footer footer footer footer';
 }
 
-.navigation-bar{
-  list-style-type: none;
+.header{
+  margin-left: 40px;
+  border:1px solid red;
+}
+
+.menu{ 
+  border:1px solid red;
+  position: relative;
   
 }
+.menu-link{
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+
+.menu-link a {
+  font-size: 20px;
+  padding: 20px;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.menu-link a:hover {
+  border-bottom: 3px solid red;
+}
+
 
 .Home, .Excercise{ 
   font-size:20px;
   align-items: center;
   padding: 5px;
+}
+
+.content{ 
+  margin-top: 100px;
+}
+
+.Excercise {
+  margin-left: 100px; 
+  border: 3px solid black;
+  height: 50px;
+  width: 100px;
 }
